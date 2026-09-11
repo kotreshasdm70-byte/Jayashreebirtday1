@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Jayashree's Birthday ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#070511;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 15%,#4c1d68 0,transparent 32%),radial-gradient(circle at 80% 70%,#5c174f 0,transparent 30%),#070511;z-index:-3}
+.stars,.stars:after{position:fixed;inset:0;content:"";background-image:radial-gradient(#fff 1px,transparent 1px);background-size:65px 65px;opacity:.35;animation:drift 18s linear infinite;z-index:-2}
+.stars:after{background-size:103px 103px;opacity:.2;animation-duration:27s}
+@keyframes drift{to{transform:translate(65px,65px)}}
+section{max-width:1050px;margin:auto;padding:80px 20px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-inner{max-width:900px}
+.kicker{font:600 13px Montserrat;letter-spacing:5px;text-transform:uppercase;opacity:.75}
+h1{font:clamp(65px,15vw,145px) "Great Vibes";color:#ffd6ed;margin:18px 0 0;text-shadow:0 0 20px #ff4eaa,0 0 60px #ff258f;animation:pulse 2.5s infinite alternate}
+@keyframes pulse{to{text-shadow:0 0 35px #ff78bf,0 0 90px #ff258f}}
+.hero-name{font:700 clamp(35px,8vw,78px) "Playfair Display";margin:8px 0 25px}
+.hero-name span{color:#ff79bd}
+.tagline{font:clamp(25px,5vw,39px) Caveat;color:#ffeaf6;line-height:1.25}
+.scroll{display:inline-block;margin-top:35px;padding:12px 22px;border:1px solid #ffffff35;border-radius:30px;font:600 12px Montserrat;letter-spacing:2px;color:#fff;text-decoration:none}
+.card{background:#ffffff0d;border:1px solid #ffffff20;border-radius:32px;padding:45px 30px;box-shadow:0 20px 70px #0008;backdrop-filter:blur(12px)}
+.title{font:700 clamp(36px,6vw,60px) "Dancing Script";color:#ffd0e8;text-align:center;margin:0 0 20px}
+.text{font:18px/2 "Playfair Display";color:#f9eaf3;text-align:center;max-width:800px;margin:auto}
+.highlight{font:700 24px Caveat;color:#ff9dce}
+.wishes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.wishbox{padding:28px 18px;border-radius:24px;background:#ffffff09;border:1px solid #ffffff18;text-align:center}
+.wishbox .emoji{font-size:38px}
+.wishbox h3{font:700 24px Pacifico;color:#ffc1df;margin:15px 0 8px}
+.wishbox p{font:17px/1.6 Caveat;margin:0;color:#fbeef6}
+.gallery-head{text-align:center}
+.gallery-sub{font:22px Caveat;color:#ffd4e8}
+.controls{text-align:center;margin:25px 0}
+.btn{display:inline-block;background:linear-gradient(135deg,#ff4fa8,#a83cff);padding:16px 27px;border-radius:50px;font:700 14px Montserrat;cursor:pointer;box-shadow:0 10px 30px #ff4fa855}
+input{display:none}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.photo-wrap{position:relative;overflow:hidden;border-radius:20px;aspect-ratio:1;background:#ffffff10;border:1px solid #ffffff1a}
+.photo{width:100%;height:100%;object-fit:cover;cursor:pointer;transition:.45s}
+.photo-wrap:hover .photo{transform:scale(1.08)}
+.number{position:absolute;top:8px;left:8px;background:#0008;border-radius:20px;padding:5px 9px;font:600 11px Montserrat}
+.letter{margin-top:25px}
+.letter p{font:clamp(23px,4vw,31px)/1.5 Caveat;color:#ffe8f4;text-align:center}
+.signature{font:38px "Dancing Script";text-align:right;color:#ff9dcc}
+.timeline{display:grid;gap:15px;margin-top:30px}
+.memory{display:flex;gap:18px;align-items:center;padding:20px;border-radius:20px;background:#ffffff08;border-left:3px solid #ff71b8}
+.memory b{font:24px Pacifico;color:#ffc3df}
+.memory span{font:20px Caveat;color:#fff}
+.final{text-align:center;padding-bottom:110px}
+.final-big{font:clamp(48px,10vw,90px) "Great Vibes";color:#ffd2e9;text-shadow:0 0 35px #ff4ea9}
+.final-small{font:25px Caveat;color:#ffe7f2}
+.heart{position:fixed;bottom:-50px;z-index:-1;animation:float linear forwards;pointer-events:none}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+#viewer{display:none;position:fixed;inset:0;background:#000e;z-index:50;align-items:center;justify-content:center;padding:20px}
+#viewer img{max-width:95%;max-height:90%;border-radius:18px}
+.close{position:absolute;right:25px;top:15px;font:40px Arial;cursor:pointer}
+@media(max-width:800px){.wishes{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}section{padding:65px 14px}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker">A special day • A special friend • A special memory</div>
+<h1>Happy Birthday</h1>
+<div class="hero-name"><span>♡</span> Jayashree R Naik <span>♡</span></div>
+<div class="tagline">Today is all about celebrating YOU — your smile, your dreams and the beautiful person you are. ✨</div>
+<a class="scroll" href="#story">SCROLL FOR YOUR SURPRISE ↓</a>
+</div>
+</section>
+
+<section id="story">
+<div class="card">
+<h2 class="title">A Little Birthday Story 🌷</h2>
+<p class="text">
+Some people come into our life and quietly become part of our best memories.
+Your friendship is one of those beautiful things. From random conversations
+to unforgettable moments, every memory becomes a little more special because
+you are in it.
+</p>
+<p class="text highlight">May this new chapter bring you everything your heart wishes for. 💕</p>
+<div class="wishes">
+<div class="wishbox"><div class="emoji">🌸</div><h3>Happiness</h3><p>May your smile never run out of reasons.</p></div>
+<div class="wishbox"><div class="emoji">✨</div><h3>Dreams</h3><p>May every dream slowly become your reality.</p></div>
+<div class="wishbox"><div class="emoji">💖</div><h3>Friendship</h3><p>May beautiful memories stay with you forever.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card letter">
+<h2 class="title">A Message Just For You 💌</h2>
+<p>
+Happy Birthday, Jayashree! 🎂<br>
+I hope you always remember how special you are.
+May your life be filled with peaceful days, genuine people,
+big achievements, little joys and countless reasons to laugh.
+Never stop believing in yourself. Keep shining in your own way,
+because the world is brighter with your smile.
+</p>
+<p>
+Today, forget all the worries and simply enjoy your day.
+Make memories, laugh a little louder, dream a little bigger,
+and celebrate the wonderful person you have become.
+</p>
+<div class="signature">With lots of love & friendship ❤️</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<div class="gallery-head">
+<h2 class="title">Our Memory Gallery 📸</h2>
+<div class="gallery-sub">Add your favourite photos below — up to 15 memories.</div>
+</div>
+<div class="controls">
+<label class="btn" for="photos">＋ ADD PHOTOS</label>
+<input id="photos" type="file" accept="image/*" multiple>
+</div>
+<div id="gallery" class="gallery"></div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2 class="title">Little Things That Matter 💫</h2>
+<div class="timeline">
+<div class="memory"><b>01</b><span>Every laugh that made an ordinary day memorable.</span></div>
+<div class="memory"><b>02</b><span>Every conversation that lasted longer than expected.</span></div>
+<div class="memory"><b>03</b><span>Every silly moment that became a favourite memory.</span></div>
+<div class="memory"><b>04</b><span>And every new memory still waiting to happen.</span></div>
+</div>
+</div>
+</section>
+
+<section class="final">
+<div class="final-big">Happy Birthday, Jayashree! 🎂</div>
+<div class="final-small">May your next chapter be your most beautiful one yet. 🌙✨</div>
+<div class="final-small">Stay happy • Stay amazing • Keep smiling ❤️</div>
+</section>
+
+<div id="viewer"><div class="close" onclick="closeViewer()">×</div><img id="bigPhoto"></div>
+
+<script>
+const input=document.getElementById('photos'),gallery=document.getElementById('gallery');
+input.addEventListener('change',()=>{
+ gallery.innerHTML='';
+ [...input.files].slice(0,15).forEach((file,i)=>{
+  if(!file.type.startsWith('image/'))return;
+  const url=URL.createObjectURL(file);
+  const wrap=document.createElement('div');wrap.className='photo-wrap';
+  const num=document.createElement('div');num.className='number';num.textContent=(i+1).toString().padStart(2,'0');
+  const img=document.createElement('img');img.className='photo';img.src=url;
+  img.onclick=()=>openViewer(url);
+  wrap.append(num,img);gallery.appendChild(wrap);
+ });
+});
+function openViewer(url){document.getElementById('bigPhoto').src=url;document.getElementById('viewer').style.display='flex'}
+function closeViewer(){document.getElementById('viewer').style.display='none'}
+setInterval(()=>{
+ const h=document.createElement('div');h.className='heart';
+ h.textContent=['❤️','💖','💕','✨','🌸'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=15+Math.random()*22+'px';
+ h.style.animationDuration=6+Math.random()*6+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),13000);
+},650);
+</script>
+</body>
+</html>
